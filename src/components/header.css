@@ -1,0 +1,69 @@
+.logo-container{
+    width: 100px;
+    /* border: 1px solid red; */
+}
+
+.logo-container img{
+    width: 100%;
+}
+/* header.css */
+
+  
+  .themeSelector {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    padding: 20px; /* Adjust as needed */
+  }
+  
+  .logo-name{
+    align-self: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+    color: #000000a2;
+  }
+  .themeSelector span {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .light { background-color: #f8f9fa; }
+  .medium { background-color: #6c757d; }
+  .dark { background-color: #343a40; }
+  .gradient1 { background: linear-gradient(45deg, #f3ec78, #af4261); }
+  .gradient2 { background: linear-gradient(45deg, #42e695, #3bb2b8); }
+  .gradient3 { background: linear-gradient(45deg, #ff758c, #ff7eb3); }
+  
+  .activeTheme {
+    transform: scale(1.5);  /* Scale up */
+    border: 1px solid #000; /* Highlight the active theme */
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  .shadow-custom {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 5px; /* Optional: to give rounded corners */
+  }
+
+  .themeSelector span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effects */
+  .themeSelector span:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }

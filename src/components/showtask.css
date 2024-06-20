@@ -1,0 +1,49 @@
+#todo-section{
+    /* border: 1px solid red; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 5px; 
+}
+
+.section1{
+    justify-content: space-between;
+}
+
+
+.section1 h3{
+margin:0}
+.count{
+    background-color: rgba(0, 0, 0, 0.131);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+  
+}
+
+
+
+#item-container{
+    justify-content: space-around;
+    padding: 10px;
+    gap: 10px;
+}
+
+.task-container{
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.icon-container{
+    align-self: center;
+}
+
+.icon-container .fa-pen-to-square{
+    margin-inline: 5px;
+    color: rgb(8, 0, 255);
+    }
+.icon-container i{
+margin-inline: 5px;
+color: red;
+cursor: pointer;
+}

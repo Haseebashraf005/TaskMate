@@ -1,0 +1,10 @@
+
+body{
+    font-family: sans-serif;
+    background-color: rgba(227, 210, 189, 0.343);
+    min-height: 98vh;
+    transition: background-color 1s ease, color 1s ease;
+
+}
+
+
