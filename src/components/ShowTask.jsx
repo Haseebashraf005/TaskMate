@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./showtask.css"
 import Data from "./data.js"
+import { UserData } from '../store/UserData.js'
 
 const ShowTask = ({ tasklist, setTaskList,singleTask,setSingleTask }) => {
 
@@ -19,6 +20,9 @@ const ShowTask = ({ tasklist, setTaskList,singleTask,setSingleTask }) => {
     setSingleTask(eidittaskelement)
 
   }
+
+  let userdetails = useContext(UserData)
+  console.log(userdetails)
 
 
   return (

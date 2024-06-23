@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from './components/Header'
 import AddTask from './components/AddTask'
 import ShowTask from './components/ShowTask'
+import { UserData } from './store/UserData'
 
 
 const App = () => {
@@ -9,24 +10,33 @@ const App = () => {
 
 
   //for store individual task object for eidit purpose
-  const [singleTask,setSingleTask] = useState({});
+  const [singleTask, setSingleTask] = useState({});
 
- useEffect(() => {
+  useEffect(() => {
     localStorage.setItem("tasklist", JSON.stringify(tasklist));
   }, [tasklist]);
- 
+
+
+  let userdata = {
+    name:"haseeb",
+    national : "pak",
+    id:6229
+  }
 
   return (
     <>
 
-      <Header />
+      <UserData.Provider value={userdata}>
+        <Header />
 
-      <AddTask tasklist = {tasklist} setTaskList ={setTaskList} singleTask ={singleTask} setSingleTask={
-        setSingleTask
-      }/>
+        <AddTask tasklist={tasklist} setTaskList={setTaskList} singleTask={singleTask} setSingleTask={
+          setSingleTask
+        } />
 
-      <ShowTask tasklist = {tasklist} setTaskList ={setTaskList} singleTask ={singleTask} setSingleTask={
-        setSingleTask}/> 
+        <ShowTask tasklist={tasklist} setTaskList={setTaskList} singleTask={singleTask} setSingleTask={
+          setSingleTask} />
+
+      </UserData.Provider>
 
 
 
