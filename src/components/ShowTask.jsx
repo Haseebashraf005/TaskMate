@@ -21,12 +21,14 @@ const ShowTask = ({ tasklist, setTaskList,singleTask,setSingleTask }) => {
 
   }
 
-  let userdetails = useContext(UserData)
-  console.log(userdetails)
+  let {name,id} = useContext(UserData)
+  console.log(name)
 
 
   return (
     <>
+
+    <h3 className='text-center text-white mt-5 '>welcome mr { name || "admin"}</h3>
     {
       tasklist.length >0 &&
       
